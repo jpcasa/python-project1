@@ -16,7 +16,7 @@ if __name__ == '__main__':
 	 	players_list = []
 
 	 	# Reads CSV Files and create a List with Players
-		with open("soccer_players.csv", "rb") as csvfile:
+		with open("soccer_players.csv") as csvfile
 			players_file = csv.DictReader(csvfile)
 			for player in players_file:
 				players_list.append(player)
@@ -34,7 +34,7 @@ if __name__ == '__main__':
 				players.append(player)
 
 		# Sorts out the Experienced players list
-		players.sort()
+		# players.sort()
 
 		return players
 
@@ -105,11 +105,6 @@ if __name__ == '__main__':
 	# Assigns Players to Teams
 	assign_players(experienced_players)
 	assign_players(rookie_players)
-
-	# Sorts out the teams (Let's not hurt the rookies feelings)
-	Sharks.sort()
-	Raptors.sort()
-	Dragons.sort()
 
 	# Creates the teams.txt file
 	create_teams_file()
