@@ -16,7 +16,7 @@ if __name__ == '__main__':
 	 	players_list = []
 
 	 	# Reads CSV Files and create a List with Players
-		with open("soccer_players.csv") as csvfile
+		with open("soccer_players.csv") as csvfile:
 			players_file = csv.DictReader(csvfile)
 			for player in players_file:
 				players_list.append(player)
